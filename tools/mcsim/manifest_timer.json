@@ -1,0 +1,38 @@
+{
+    "modules": {
+        "*": [
+            "$(MODULES)/files/resource/*",
+			"$(MODULES)/base/instrumentation/modInstrumentation",
+			"$(MODULES)/base/time/*",
+			"$(MODULES)/base/timer/timer"
+        ]
+    },
+    "platforms": {
+        "x-lin": {
+            "modules": {
+                "*": [
+                    "$(MODULES)/base/time/lin/*",
+                    "$(MODULES)/base/timer/lin/*"
+                ]
+            }
+        },
+        "x-mac": {
+            "modules": {
+                "*": [
+                    "$(MODULES)/base/time/mac/*",
+                    "$(MODULES)/base/timer/mac/*",
+                    "$(MODULES)/base/timer/modTimer"
+                ]
+            }
+        },
+        "x-win": {
+            "modules": {
+                "*": [
+                    "$(MODULES)/base/time/win/*",
+                    "$(MODULES)/base/timer/win/*",
+                    "$(MODULES)/base/timer/modTimer"
+                ]
+            }
+        }
+    }
+}

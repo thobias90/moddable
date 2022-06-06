@@ -30,6 +30,8 @@ import * as BinaryMessageNamespace from "BinaryMessage";
 import * as ControlsPaneNamespace from "ControlsPane";
 import * as DevicePaneNamespace from "DevicePane";
 import * as assetsNamespace from "assets";
+import * as timerNamespace from "timer";
+import * as websocketNamespace from "websocket";
 
 const compartmentModuleMap = {
 	"piu/All": piuAllNamespace,
@@ -43,6 +45,8 @@ const compartmentModuleMap = {
 	"ControlsPane": ControlsPaneNamespace,
 	"DevicePane": DevicePaneNamespace,
 	"assets": assetsNamespace,
+	"timer": timerNamespace,
+	"websocket": websocketNamespace
 }
 const compartmentOptions = {
 	resolveHook(specifier, refererSpecifier) {

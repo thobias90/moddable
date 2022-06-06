@@ -26,6 +26,10 @@
 		"*": [
 		]
 	},
+	"include": [
+		"manifest_timer.json",
+		"manifest_network.json"
+	],
 	"modules": {
 		"~": [
 			"$(SIMULATOR)/modules/screen"

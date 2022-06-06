@@ -1,0 +1,35 @@
+{
+    "modules": {
+		"*": [
+			"$(MODULES)/network/websocket/*",
+			"$(MODULES)/data/base64/*",
+			"$(MODULES)/data/logical/*",
+			"$(MODULES)/crypt/digest/*",
+			"$(MODULES)/crypt/digest/kcl/*",
+            "$(MODULES)/network/socket/*"
+		]
+	},
+    "platforms": {
+        "x-lin": {
+            "modules": {
+                "*": [
+                    "$(MODULES)/network/socket/lin/*"
+                ]
+            }
+        },
+        "x-mac": {
+            "modules": {
+                "*": [
+                    "$(MODULES)/network/socket/mac/*"
+                ]
+            }
+        },
+        "x-win": {
+            "modules": {
+                "*": [
+                    "$(MODULES)/network/socket/win/*"
+                ]
+            }
+        }
+    }
+}
