@@ -1,11 +1,13 @@
 import { DeviceBehavior, DeviceContainer, DeviceScreen } from "DevicePane";
 import { ControlsColumn } from "ControlsPane";
 import { Client } from "websocket"
+import Timer from "timer";
 
 class SimulatorBehavior extends DeviceBehavior {
     constructor() {
         super();
-        this.clientSetup();
+        const startupClient = this.clientSetup.bind(this);
+        Timer.set(startupClient, 1000);
     }
 
     clientSetup() {
@@ -26,7 +28,6 @@ class SimulatorBehavior extends DeviceBehavior {
                     value = JSON.parse(value);
                     value.count += 1;
                     value.toggle = !value.toggle;
-                    value.random = Math.round(Math.random() * 1000);
                     this.write(JSON.stringify(value));
                     break;
 
