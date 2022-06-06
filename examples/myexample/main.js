@@ -13,7 +13,6 @@ server.callback = function (message, value) {
 
 		case Server.receive:
 			trace(`main.js: websocket message received: ${value}\n`);
-			this.write(value);		// echo
 			break;
 
 		case Server.disconnect:
